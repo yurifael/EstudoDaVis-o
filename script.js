@@ -10,7 +10,7 @@ cont btnDiminuir = document.getElementByid("btnDiminuir-texto")
 
 let tamanhoAtualFonte = 100;
 
-/função alto contraste
+//função alto contraste
 
 btnContraste.addventListener("click", () =>{
     
