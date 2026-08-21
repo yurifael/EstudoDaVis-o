@@ -1,0 +1,299 @@
+/* Base e Acessibilidade */
+html {
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Link de atalho para leitor de tela (Skip Link) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: #ffffff;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Container Responsivo */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* Barra de Acessibilidade */
+.barra-acessibilidade {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid #334155;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+}
+
+.botoes-acessibilidade {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.botoes-acessibilidade button {
+    background-color: #ffffff;
+    color: #0f172a;
+    border: 2px solid #ffffff;
+    padding: 0.35rem 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.botoes-acessibilidade button:focus,
+a:focus {
+    outline: 3px solid #f59e0b;
+    outline-offset: 2px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    color: #ffffff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.badge-tag {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.header h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: #cbd5e1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Cards e Seções */
+.card {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.highlight-card {
+    border-left: 6px solid #2563eb;
+    background-color: #f0f9ff;
+}
+
+/* Listas */
+.info-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.info-list li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #2563eb;
+}
+
+.info-list strong {
+    display: block;
+    color: #0f172a;
+}
+
+/* Grid de Cards */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.grid-item {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 1.25rem;
+    border-radius: 6px;
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon-label {
+    font-size: 1.5rem;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.badge-dicromata { background-color: #e0f2fe; color: #0369a1; }
+.badge-tricromata { background-color: #dcfce7; color: #15803d; }
+.badge-tetracromata { background-color: #fef3c7; color: #b45309; }
+.badge-hiperespectral { background-color: #f3e8ff; color: #6b21a8; }
+
+/* Tabela Acessível */
+.table-container {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+}
+
+thead th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+tbody th {
+    background-color: #f1f5f9;
+}
+
+/* Status da Tabela */
+.status {
+    font-weight: bold;
+}
+.status-high, .status-yes { color: #166534; }
+.status-medium { color: #854d0e; }
+.status-low, .status-no { color: #991b1b; }
+
+/* Links */
+a {
+    color: #1d4ed8;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* =========================================
+   ESTILOS DE ALTO CONTRASTE (WCAG AAA)
+   ========================================= */
+body.auto-contraste {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+}
+
+body.auto-contraste .header,
+body.auto-contraste .barra-acessibilidade,
+body.auto-contraste .footer {
+    background-color: #000000 !important;
+    border-bottom: 2px solid #ffff00;
+}
+
+body.auto-contraste .card,
+body.auto-contraste .grid-item,
+body.auto-contraste table,
+body.auto-contraste th,
+body.auto-contraste td {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+body.auto-contraste h1,
+body.auto-contraste h2,
+body.auto-contraste h3,
+body.auto-contraste p,
+body.auto-contraste li,
+body.auto-contraste span,
+body.auto-contraste strong,
+body.auto-contraste caption {
+    color: #ffff00 !important;
+}
+
+body.auto-contraste a {
+    color: #ffffff !important;
+}
+
+body.auto-contraste .badge {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    border: 1px solid #ffff00;
+}
+
+body.auto-contraste .botoes-acessibilidade button {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
+}
