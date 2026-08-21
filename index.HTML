@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore como os animais enxergam o mundo com base em diretrizes de acessibilidade visual e biologia da retina.">
+    <meta name="description" content="Guia científico e acessível sobre fotorreceptores, espectro de cores e como os animais enxergam o mundo.">
     <title>Visão dos Animais & Acessibilidade Visual</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,47 +11,53 @@
 
     <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-    <!-- Barra de Acessibilidade -->
-    <nav class="barra-acessibilidade" aria-label="Atalhos de acessibilidade">
+    <!-- Barra de Acessibilidade Fixa -->
+    <nav class="barra-acessibilidade" aria-label="Ferramentas de Acessibilidade">
         <div class="container nav-content">
-            <span>Acessibilidade:</span>
+            <span class="acessibilidade-titulo">♿ Ferramentas de Acessibilidade:</span>
             <div class="botoes-acessibilidade">
-                <button id="btnAumentar-texto" aria-label="Aumentar tamanho do texto">A+</button>
-                <button id="btnDiminuir-texto" aria-label="Diminuir tamanho do texto">A-</button>
-                <button id="btn-contraste" aria-pressed="false" aria-label="Alternar alto contraste">Alto Contraste 🌓</button>
+                <button id="btnDiminuir-texto" aria-label="Diminuir tamanho da fonte (A-)">A-</button>
+                <button id="btnReset-texto" aria-label="Restaurar tamanho da fonte original (A)">A</button>
+                <button id="btnAumentar-texto" aria-label="Aumentar tamanho da fonte (A+)">A+</button>
+                <button id="btn-contraste" aria-pressed="false" aria-label="Alternar modo de alto contraste">
+                    <span class="icon-contrast" aria-hidden="true">🌓</span> Alto Contraste
+                </button>
             </div>
         </div>
     </nav>
 
+    <!-- Cabeçalho Principal -->
     <header class="header">
         <div class="container">
             <span class="badge-tag">Biologia & Ótica Acessível</span>
             <h1>Como os Animais Enxergam o Mundo?</h1>
-            <p class="subtitle">Uma análise científica sobre fotorreceptores, percepção de cores e variações visuais no reino animal.</p>
+            <p class="subtitle">Uma análise prática sobre fotorreceptores, percepção de frequência luminosa e daltonismo.</p>
         </div>
     </header>
 
     <main id="conteudo-principal" class="container">
 
+        <!-- Seção 1: Fotorreceptores -->
         <section class="card" aria-labelledby="sec-fotorreceptores">
             <h2 id="sec-fotorreceptores">1. Fotorreceptores: Cones e Bastonetes</h2>
-            <p>A visão de qualquer espécie depende da estrutura de sua retina. O olho converte comprimentos de onda de luz em sinais elétricos interpretados pelo cérebro através de duas células fotorreceptoras principais:</p>
+            <p>A visão de qualquer espécie depende da anatomia de sua retina. O olho converte ondas eletromagnéticas em impulsos elétricos interpretados pelo cérebro através de duas células fotorreceptoras:</p>
             
             <ul class="info-list">
                 <li>
-                    <strong>Bastonetes (Visão Noturna e Movimento):</strong>
-                    <span>Altamente sensíveis à luz fraca. Animais noturnos possuem uma densidade imensa de bastonetes, permitindo caçar no escuro.</span>
+                    <strong>Bastonetes (Visão Noturna e Detecção de Movimento):</strong>
+                    <span>Extremamente sensíveis à luz de baixa intensidade. Predominam em caçadores noturnos como felinos e corujas.</span>
                 </li>
                 <li>
-                    <strong>Cones (Visão de Cores e Detalhes):</strong>
-                    <span>Atuam em ambientes bem iluminados. A quantidade de tipos de cones determina a amplitude de cores que a espécie percebe.</span>
+                    <strong>Cones (Visão de Cores e Definição de Imagem):</strong>
+                    <span>Operam sob luz abundante. A diversidade funcional dos cones determina a quantidade de frequências de cores registradas.</span>
                 </li>
             </ul>
         </section>
 
+        <!-- Seção 2: Classificação das Espécies -->
         <section class="card" aria-labelledby="sec-categorias">
             <h2 id="sec-categorias">2. Classificação Visual por Espécie</h2>
-            <p>Conforme destacado nas diretrizes de acessibilidade, o uso de ícones e rótulos textuais junto às cores garante a interpretação para pessoas com daltonismo ou baixa visão.</p>
+            <p>Uso de cartões informativos com rótulos semânticos e identificadores visuais para garantir máxima legibilidade:</p>
 
             <div class="grid-cards">
                 
@@ -61,8 +67,8 @@
                         <h3>Dicromatas</h3>
                     </div>
                     <span class="badge badge-dicromata">2 Tipos de Cones</span>
-                    <p><strong>Exemplos:</strong> Cães, gatos e touros.</p>
-                    <p>Enxergam predominantemente tons de azul e amarelo. O vermelho e o verde são percebidos como tons de cinza ou castanho.</p>
+                    <p><strong>Exemplos:</strong> Cães, gatos e equinos.</p>
+                    <p>Percebem tons de azul e amarelo. Tons avermelhados e esverdeados são interpretados como variações de cinza ou castanho.</p>
                 </article>
 
                 <article class="grid-item">
@@ -72,7 +78,7 @@
                     </div>
                     <span class="badge badge-tricromata">3 Tipos de Cones</span>
                     <p><strong>Exemplos:</strong> Humanos e primatas.</p>
-                    <p>Captam as faixas do Azul, Verde e Vermelho (RGB), permitindo diferenciar milhões de combinações de cores.</p>
+                    <p>Processam o espectro do Azul, Verde e Vermelho (RGB), gerando combinações de milhões de nuances cromáticas.</p>
                 </article>
 
                 <article class="grid-item">
@@ -81,8 +87,8 @@
                         <h3>Tetracromatas</h3>
                     </div>
                     <span class="badge badge-tetracromata">4 Tipos de Cones</span>
-                    <p><strong>Exemplos:</strong> Aves, insetos e répteis.</p>
-                    <p>Conseguem enxergar a <strong>luz ultravioleta (UV)</strong>, essencial para localizar flores, presas e parceiros no reino animal.</p>
+                    <p><strong>Exemplos:</strong> Aves, répteis e peixes.</p>
+                    <p>Enxergam a <strong>luz ultravioleta (UV)</strong>, permitindo rastrear trajetos, frutos maduros e parceiros.</p>
                 </article>
 
                 <article class="grid-item">
@@ -92,19 +98,20 @@
                     </div>
                     <span class="badge badge-hiperespectral">12-16 Tipos de Cones</span>
                     <p><strong>Exemplo:</strong> Tamarutaca (Lagosta-boxeadora).</p>
-                    <p>Possui o sistema visual mais complexo do planeta, detectando luz polarizada e múltiplos espectros ultravioleta simultaneamente.</p>
+                    <p>Mecanismo visual hiperespectral capaz de detectar luz polarizada e múltiplas faixas de radiação UV simultaneamente.</p>
                 </article>
 
             </div>
         </section>
 
+        <!-- Seção 3: Tabela Comparativa -->
         <section class="card" aria-labelledby="sec-tabela">
             <h2 id="sec-tabela">3. Tabela Comparativa de Capacidades Visuais</h2>
-            <p>Esta tabela utiliza contraste alto (mínimo de 4.5:1 para texto e 3:1 para bordas) e indicação textual para todos os atributos.</p>
+            <p>Estruturada com alto contraste e marcação semântica para leitores de tela conforme as normas WCAG 2.1 AA.</p>
 
             <div class="table-container">
                 <table>
-                    <caption>Resumo das capacidades visuais no reino animal</caption>
+                    <caption>Propriedades de visão comparadas entre diferentes grupos taxonômicos</caption>
                     <thead>
                         <tr>
                             <th scope="col">Grupo Animal</th>
@@ -115,25 +122,25 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">Mamíferos Não-Primatas (Cães/Gatos)</th>
+                            <th scope="row">Mamíferos Não-Primatas</th>
                             <td>Azul e Amarelo (Dicromática)</td>
                             <td><span class="status status-high">✔ Excelente</span></td>
                             <td><span class="status status-no">✖ Não</span></td>
                         </tr>
                         <tr>
                             <th scope="row">Humanos (Tricromatas)</th>
-                            <td>Vermelho, Verde e Azul</td>
+                            <td>Azul, Verde e Vermelho</td>
                             <td><span class="status status-medium">⚠️ Moderada</span></td>
                             <td><span class="status status-no">✖ Não</span></td>
                         </tr>
                         <tr>
-                            <th scope="row">Aves Rapaces (Águias)</th>
+                            <th scope="row">Aves de Rapina</th>
                             <td>Ampliada + Ultravioleta</td>
                             <td><span class="status status-medium">⚠️ Moderada</span></td>
                             <td><span class="status status-yes">✔ Sim</span></td>
                         </tr>
                         <tr>
-                            <th scope="row">Insetos Polinizadores (Abelhas)</th>
+                            <th scope="row">Insetos Polinizadores</th>
                             <td>Azul, Verde e Ultravioleta</td>
                             <td><span class="status status-low">✖ Baixa</span></td>
                             <td><span class="status status-yes">✔ Sim</span></td>
@@ -143,17 +150,18 @@
             </div>
         </section>
 
+        <!-- Seção 4: Conexão com Daltonismo -->
         <section class="card highlight-card" aria-labelledby="sec-referencias">
-            <h2 id="sec-referencias">4. Relação com o Daltonismo Humano</h2>
-            <p>A visão de um cão ou gato (dicromata) é muito semelhante à de um ser humano com <strong>deuteranopia ou protanopia</strong> (formas de daltonismo que afetam a percepção do vermelho e verde).</p>
-            <p>Para garantir que o conteúdo web seja legível para todos os tipos de visão, siga as normas da <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">Diretriz de Acessibilidade WCAG 2.1 (link externo)</a>, mantendo sempre razões de contraste elevadas e nunca confiando apenas na cor para transmitir significados.</p>
+            <h2 id="sec-referencias">4. Paralelo com o Daltonismo Humano</h2>
+            <p>A experiência visual de mamíferos dicromatas (como cães) equivale de forma aproximada ao quadro de seres humanos com <strong>deuteranopia ou protanopia</strong> (alteração na sensibilidade dos cones vermelhos ou verdes).</p>
+            <p>Para aprender mais sobre como desenvolver interfaces inclusivas, consulte os parâmetros da <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">Diretriz de Acessibilidade Web WCAG 2.1 (link externo)</a>.</p>
         </section>
 
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Visão dos Animais - Desenvolvido em conformidade com as diretrizes de acessibilidade WCAG 2.1 AA.</p>
+            <p>&copy; Visão dos Animais — Plataforma Educativa sobre Biologia e Acessibilidade Visual.</p>
         </div>
     </footer>
 
